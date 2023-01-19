@@ -1,0 +1,51 @@
+@import './burger';
+
+.Header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid $clr-lightGold;
+  background-color: $clr-dark;
+  z-index: 10000;
+
+  &-wrapper {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    font-family: $ff-explora;
+    font-size: $fs-big;
+    letter-spacing: 5px;
+  }
+
+  &-menu {
+    ul {
+      gap: 1.5rem;
+    }
+
+    a {
+      text-transform: capitalize;
+      padding: 0.5rem 1rem;
+      transition: all 0.5s;
+      font-family: $ff-openSansBold;
+      color: $clr-aquablue;
+
+      &:hover {
+        color: $clr-dark;
+        background-color: $clr-lightGold;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Header {
+    &-menu {
+      display: none;
+    }
+
+    &-burger {
+      display: block;
+    }
+  }
+}

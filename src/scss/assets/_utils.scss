@@ -1,0 +1,37 @@
+.container {
+  width: 1340px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+// flex classes
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  @extend %flex;
+}
+
+.flex-col {
+  @extend %flex;
+  flex-direction: column;
+}
+
+// btns
+%btn-primary {
+  padding: 0.7rem 2.3rem;
+  font-family: $ff-openSansBold;
+  color: $clr-aquablue;
+  background-color: transparent;
+  border: 1px solid $clr-aquablue;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-aquablueFaded;
+  }
+}

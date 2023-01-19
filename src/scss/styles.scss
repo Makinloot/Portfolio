@@ -1,0 +1,14 @@
+@import './assets/vars';
+@import './assets/reset';
+@import './assets/utils';
+
+@import './components/header/header';
+@import './components/about/about';
+
+body {
+  background-color: $clr-dark;
+}
+
+.App {
+  min-height: 100vh;
+}

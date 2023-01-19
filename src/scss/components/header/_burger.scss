@@ -1,0 +1,70 @@
+.Header {
+  &-burger {
+    display: none;
+    cursor: pointer;
+
+    // open burger menu
+    &:has(.burger-wrapper.active) {
+      .burger-content {
+        right: 0;
+      }
+    }
+
+    .burger-wrapper {
+      position: relative;
+      gap: 0.4rem;
+
+      &.active {
+        pointer-events: none;
+      }
+
+      // burger menu button animation
+      &.active div {
+        pointer-events: none;
+
+        &:nth-of-type(1) {
+          position: absolute;
+          transform: rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          background-color: #fff;
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          position: absolute;
+          transform: rotate(-45deg);
+        }
+      }
+
+      div {
+        width: 40px;
+        height: 4px;
+        background-color: $clr-lightGold;
+        transition: all 0.3s;
+      }
+    }
+
+    .burger-content {
+      position: absolute;
+      top: calc(100% + 2rem);
+      right: -100%;
+      z-index: 10000;
+      width: 200px;
+      padding: 1rem;
+      border: 2px solid $clr-lightGold;
+      background-color: $clr-dark;
+      transition: 0.5s ease;
+
+      ul {
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
