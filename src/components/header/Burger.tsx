@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function Burger() {
+export default function Burger(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -8,9 +8,10 @@ export default function Burger() {
   useEffect(() => {
     // check if user clicked inside burger menu
     const handleClass = (e: MouseEvent): void => {
-      if (menuRef.current && !menuRef.current.contains(e.target as HTMLDivElement)) {
-        setOpen(false);
-      }
+      const divTarget = e.target as HTMLDivElement;
+      const anchorTarget = e.target as HTMLAnchorElement;
+      if (!menuRef.current?.contains(divTarget)) setOpen(false);
+      else if (anchorTarget.localName === "a") setOpen(false);
     };
 
     // add and remove evnet listener on document

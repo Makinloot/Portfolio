@@ -1,6 +1,6 @@
 import Burger from "./Burger";
 
-export default function Header() {
+export default function Header(): JSX.Element {
   return (
     <div className="Header">
       <div className="container">
@@ -14,7 +14,7 @@ export default function Header() {
                 <a href="#about">about me</a>
               </li>
               <li>
-                <a href={'/work'}>experience</a>
+                <a href={"/work"}>experience</a>
               </li>
               <li>
                 <a href={"/projects"}>projects</a>

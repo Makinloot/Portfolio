@@ -5,7 +5,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <section className="About" id="about">
       <div className="container">
