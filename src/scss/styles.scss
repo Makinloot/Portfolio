@@ -3,7 +3,8 @@
 @import './assets/utils';
 
 @import './components/header/header';
-@import './components/about/about';
+@import './components/home/home';
+@import './components/experience/experience';
 
 body {
   background-color: $clr-dark;

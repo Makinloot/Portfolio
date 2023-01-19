@@ -1,0 +1,9 @@
+.Experience {
+  min-height: 100vh;
+  background-color: red;
+
+  &-wrapper {
+    background-color: green;
+    height: 100%;
+  }
+}

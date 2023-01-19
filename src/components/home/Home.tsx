@@ -5,29 +5,29 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function About(): JSX.Element {
+export default function Home(): JSX.Element {
   return (
-    <section className="About" id="about">
+    <section className="Home" id="Home">
       <div className="container">
-        <div className="About-wrapper">
-          <strong className="About-intro">Hi, my name is</strong>
-          <div className="About-headings">
+        <div className="Home-wrapper">
+          <strong className="Home-intro">Hi, my name is</strong>
+          <div className="Home-headings">
             <h2>tornike epitashvili.</h2>
             <h3>I build things for the web.</h3>
           </div>
-          <p className="About-text">
+          <p className="Home-text">
             I'm a frontend developer from Tbilisi, Georgia. I'm focused on
             building interesting & mobile friendly websites with clean and reusable code.
             Currently working on different projects from home.
           </p>
-          <div className="About-socials flex-row">
+          <div className="Home-socials flex-row">
             <a
               href="https://github.com/Makinloot"
               target="_blank"
               title="github"
             >
               <FontAwesomeIcon
-                className="About-socials-icon"
+                className="Home-socials-icon"
                 icon={faSquareGithub}
               />
             </a>
@@ -37,7 +37,7 @@ export default function About(): JSX.Element {
               title="linkedin"
             >
               <FontAwesomeIcon
-                className="About-socials-icon"
+                className="Home-socials-icon"
                 icon={faLinkedin}
               />
             </a>
@@ -47,12 +47,12 @@ export default function About(): JSX.Element {
               title="facebook"
             >
               <FontAwesomeIcon
-                className="About-socials-icon"
+                className="Home-socials-icon"
                 icon={faSquareFacebook}
               />
             </a>
           </div>
-          <button className="About-btn">Download resume</button>
+          <button className="Home-btn">Download resume</button>
         </div>
       </div>
     </section>
