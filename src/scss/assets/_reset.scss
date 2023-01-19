@@ -8,6 +8,14 @@
 
 html {
   scroll-behavior: smooth;
+
+  @media (max-width: 768px) {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (max-width: 600px) {
+    scroll-padding-top: 8rem;
+  }
 }
 
 body {

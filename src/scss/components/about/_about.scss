@@ -2,11 +2,16 @@
   min-height: 100vh;
 
   &-wrapper {
-    width: 950px;
-    max-width: 100%;
+    // width: 950px;
+    // max-width: 100%;
+    // margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 2fr;
     justify-content: center;
+    grid-template-areas: 
+      'title title'
+      'text image'
+    ;
     column-gap: 4rem;
   }
 
@@ -15,6 +20,11 @@
     margin: 0 0 2rem;
     font-size: calc($fs-big - 1rem);
     color: $clr-aquablue;
+    grid-area: title;
+  }
+
+  &-primary {
+    grid-area: text;
   }
 
   &-skills {
@@ -39,6 +49,7 @@
     transition: all .3s;
     margin-right: 2rem;
     max-height: 300px;
+    grid-area: image;
 
     &:hover {
       background-color: transparent;
@@ -76,6 +87,11 @@
 
     &-wrapper {
       grid-template-columns: 1fr;
+      grid-template-areas: 
+        'title'
+        'text'
+        'image'
+      ;
     }
 
     &-secondary {

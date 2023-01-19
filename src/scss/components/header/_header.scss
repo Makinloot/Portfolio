@@ -49,3 +49,12 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .Header {
+
+    &-logo {
+      font-size: calc($fs-medium + .5rem);
+    }
+  }
+}

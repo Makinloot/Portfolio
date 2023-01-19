@@ -4,10 +4,8 @@
     cursor: pointer;
 
     // open burger menu
-    &:has(.burger-wrapper.active) {
-      .burger-content {
-        right: 0;
-      }
+    .burger-wrapper.active ~ .burger-content {
+      right: 0;
     }
 
     .burger-wrapper {
@@ -49,7 +47,7 @@
     .burger-content {
       position: absolute;
       top: calc(100% + 2rem);
-      right: -100%;
+      right: -140%;
       z-index: 10000;
       width: 200px;
       padding: 1rem;

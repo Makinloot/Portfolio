@@ -3,9 +3,9 @@ import myImg from '../../assets/me.jpg';
 export default function About() {
   return (
     <section className="About flex-row" id='about'>
-      <div className="container">
-        <h2 className="About-title">About me</h2>
+      <div className="container-small">
         <div className="About-wrapper">
+        <h2 className="About-title">About me</h2>
           <div className="About-primary">
             <p>
               Hello! My name is Tornike and i enjoy creating things about web.
@@ -19,7 +19,7 @@ export default function About() {
               and more about web technologies.
             </p><br />
             <p>
-              I also started learning Backened through Node JS through my career of web development.
+              I also started learning Backened using Node JS through my career of web development.
               In the end i'm aiming to become fullstack developer.
             </p>
             <ul className="About-skills">
