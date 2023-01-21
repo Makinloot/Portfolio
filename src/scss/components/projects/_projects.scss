@@ -1,5 +1,14 @@
 .Projects {
+  padding-top: 2rem;
   min-height: 70vh;
+
+  @media (max-width: 480px) {
+    padding-top: 0;
+  }
+
+  &-heading {
+    @extend %heading-primary;
+  }
 
   &-wrapper {
     display: grid;
@@ -34,7 +43,12 @@
       display: flex;
       background-color: transparent;
 
-      div {
+      &:hover {
+        scale: 1 !important;
+      }
+
+      a {
+        @extend %btn-primary;
         height: 200px;
         width: 200px;
         border-radius: 50%;

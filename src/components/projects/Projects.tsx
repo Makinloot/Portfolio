@@ -23,20 +23,17 @@ const Projects = () => {
   };
 
   return (
-    <div className="Projects flex-col">
+    <section className="Projects flex-col" id="projects">
       <div className="container-small">
+        <h2 className="Projects-heading">projects</h2>
         <div className="Projects-wrapper">
           {handleProjects()}
-          <a
-            href="https://github.com/Makinloot?tab=repositories"
-            target="_blank"
-            className="Projects-card flex-col"
-          >
-            <div className="flex-col">See more</div>
-          </a>
+          <div className="Projects-card flex-col">
+            <a href="https://github.com/Makinloot?tab=repositories" target="_blank" className="flex-col">See more</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

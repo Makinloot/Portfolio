@@ -40,7 +40,7 @@ export default function Burger(): JSX.Element {
             <a href="#experience">experience</a>
           </li>
           <li>
-            <a href={"/projects"}>projects</a>
+            <a href="#projects">projects</a>
           </li>
           <li>
             <a href={"/contact"}>contact</a>
