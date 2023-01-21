@@ -9,7 +9,7 @@ function App(): JSX.Element {
       <Header />
       <Home />
       <About />
-      {/* <Experience /> */}
+      <Experience />
     </div>
   );
 }

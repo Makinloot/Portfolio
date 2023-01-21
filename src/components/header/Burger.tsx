@@ -37,7 +37,7 @@ export default function Burger(): JSX.Element {
             <a href="#about">about me</a>
           </li>
           <li>
-            <a href="experience">experience</a>
+            <a href="#experience">experience</a>
           </li>
           <li>
             <a href={"/projects"}>projects</a>

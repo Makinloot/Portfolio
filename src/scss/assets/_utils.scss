@@ -45,3 +45,12 @@
     background-color: $clr-aquablueFaded;
   }
 }
+
+// headings
+%heading-primary {
+  position: relative;
+  margin: 0 0 2rem;
+  font-size: calc($fs-big - 1rem);
+  color: $clr-aquablue;
+  text-transform: capitalize;
+}

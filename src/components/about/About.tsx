@@ -4,8 +4,8 @@ export default function About() {
   return (
     <section className="About flex-row" id='about'>
       <div className="container-small">
-        <div className="About-wrapper">
         <h2 className="About-title">About me</h2>
+        <div className="About-wrapper">
           <div className="About-primary">
             <p>
               Hello! My name is Tornike and i enjoy creating things about web.
