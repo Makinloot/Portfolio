@@ -1,39 +1,6 @@
 import { useState, useRef } from "react";
 import ExperienceText from "./ExperienceText";
-
-const EXP_DATA = [{
-  position: 'Frontend Dev',
-  title: "Unilab Tbilisi",
-  date: "2022 November - 2023 January",
-  texts: [
-    {
-      text: 'Create modern and maintanable code with old browser support for website'
-    },
-    {
-      text: 'Work with great team of developers and designers'
-    },
-    {
-      text: 'Communicate with team on daily basis for maximum results'
-    }
-  ]
-},
-{
-  position: 'Intern Dev',
-  title: "Unilab Tbilisi",
-  date: "2022 June - November",
-  texts: [
-    {
-      text: 'Finish older projects created by other developers'
-    },
-    {
-      text: 'Create real world project from scratch for children language scientists'
-    },
-    {
-      text: 'Taking more work than required to maximize absorbing knowledge'
-    }
-  ]
-}
-];
+import { EXP_DATA } from "../../data";
 
 export default function Experience() {
   const [arrIdx, setArrIdx] = useState<number>(0);
@@ -41,18 +8,17 @@ export default function Experience() {
   const liRefTwo = useRef(null);
 
   const handleExperience = (num: number, active: any, inactive: any) => {
-    active.current.classList.add('active');
-    inactive.current.classList.remove('active');
+    active.current.classList.add("active");
+    inactive.current.classList.remove("active");
     setArrIdx(num);
-  }
+  };
 
   return (
-    <div className="Experience flex-row" id="experience">
+    <section className="Experience flex-row" id="experience">
       <div className="container-small">
         <h2 className="Experience-title">experience</h2>
         <div className="Experience-wrapper">
           <ul className="Experience-company flex-col">
-            {/* {} */}
             <li
               className="active"
               ref={liRefOne}
@@ -67,7 +33,7 @@ export default function Experience() {
               {EXP_DATA[1].position}
             </li>
           </ul>
-          <ExperienceText 
+          <ExperienceText
             position={EXP_DATA[arrIdx].position}
             title={EXP_DATA[arrIdx].title}
             date={EXP_DATA[arrIdx].date}
@@ -75,6 +41,6 @@ export default function Experience() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

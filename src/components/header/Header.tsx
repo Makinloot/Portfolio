@@ -2,7 +2,7 @@ import Burger from "./Burger";
 
 export default function Header(): JSX.Element {
   return (
-    <div className="Header">
+    <header className="Header">
       <div className="container">
         <div className="Header-wrapper flex-row">
           <div className="Header-logo">
@@ -27,6 +27,6 @@ export default function Header(): JSX.Element {
           <Burger />
         </div>
       </div>
-    </div>
+    </header>
   );
 }

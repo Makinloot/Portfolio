@@ -2,6 +2,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Projects";
 
 function App(): JSX.Element {
   return (
@@ -10,6 +11,7 @@ function App(): JSX.Element {
       <Home />
       <About />
       <Experience />
+      <Projects />
     </div>
   );
 }

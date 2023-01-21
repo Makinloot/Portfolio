@@ -17,8 +17,8 @@ export default function Home(): JSX.Element {
           </div>
           <p className="Home-text">
             I'm a frontend developer from Tbilisi, Georgia. I'm focused on
-            building interesting & mobile friendly websites with clean and reusable code.
-            Currently working on different projects from home.
+            building interesting & mobile friendly websites with clean and
+            reusable code. Currently working on different projects from home.
           </p>
           <div className="Home-socials flex-row">
             <a

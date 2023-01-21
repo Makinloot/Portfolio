@@ -1,0 +1,84 @@
+.Projects {
+  min-height: 70vh;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 0.5rem;
+    padding: 0.8rem;
+    min-height: 200px;
+    background-color: $clr-aquablueFaded;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: all 0.5s;
+
+    &.flex-col {
+      display: flex;
+      background-color: transparent;
+
+      div {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 1px solid;
+        font-size: $fs-medium;
+
+        @media (max-width: 480px) {
+          height: 100px;
+          border-radius: initial;
+        }
+      }
+    }
+
+    &:hover {
+      scale: 0.9;
+    }
+
+    .card-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+
+      @media (max-width: 480px) {
+        height: auto;
+      }
+    }
+
+    h4 {
+      font-family: $ff-openSansBold;
+    }
+
+    p {
+      font-size: $fs-small;
+    }
+
+    .card-technologies {
+      justify-content: flex-start;
+      gap: 0.5rem;
+
+      .tech-icons {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
