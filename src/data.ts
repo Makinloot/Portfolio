@@ -129,8 +129,8 @@ export const projects: ProjectsTypes = [
         color: colors.html,
       },
       {
-        icon: faCss3Alt,
-        color: colors.css,
+        icon: faSass,
+        color: colors.sass,
       },
       {
         icon: faSquareJs,

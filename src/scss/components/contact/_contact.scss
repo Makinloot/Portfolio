@@ -1,0 +1,95 @@
+.Contact {
+  margin: 3rem 0 5rem;
+  min-height: 70vh;
+
+  &-title {
+    @extend %heading-primary;
+  }
+
+  &-text {
+    margin: 0 0 2rem;
+    max-width: 450px;
+    line-height: 1.5;
+  }
+
+  &-form {
+    max-width: 600px;
+    display: grid;
+    gap: .8rem;
+    grid-template-areas: 
+      "name email"
+      "subject subject"
+      "message message"
+      "empty btn"
+    ;
+
+    @media (max-width: 480px) {
+      grid-template-areas: 
+        "name"
+        "email"
+        "subject"
+        "message"
+        "btn"
+      ;
+    }
+
+    .input-wrapper {
+      position: relative;
+      transition: .3s;
+
+      input:focus ~ .input-border,
+      textarea:focus ~ .input-border {
+        width: 100%;
+        background-color: $clr-aquablue;
+      }
+
+      .input-border {
+        position: absolute;
+        top: 100%;
+        height: 1px;
+        width: 0;
+        transition: all .3s;
+      }
+    }
+
+    // reset input fields
+    input, textarea {
+      width: 100%;
+      height: 100%;
+      padding: 1rem .5rem;
+      border: none;
+      outline: none;
+      resize: none;
+      background-color: $clr-darkGrey;
+      font-size: calc($fs-medium - .5rem);
+      color: $clr-lightGold;
+    }
+
+    ::placeholder {
+      color: $clr-lightGold;
+      font-style: italic;
+    }
+
+    // grid positions for inputs inside form
+    .name-wrapper {
+      grid-area: name;
+    }
+
+    .email-wrapper {
+      grid-area: email;
+    }
+
+    .subject-wrapper {
+      grid-area: subject;
+    }
+
+    .textarea-wrapper {
+      grid-area: message;
+    }
+    
+    #submit-form {
+      @extend %btn-primary;
+      grid-area: btn;
+    }
+  }
+}
