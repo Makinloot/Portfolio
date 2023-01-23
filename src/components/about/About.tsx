@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { LoadContext } from "../../App";
 import myImg from "../../assets/me.jpg";
 
 export default function About() {
+  const active = useContext(LoadContext);
+
   return (
-    <section className="About flex-row" id="about">
+    <section className={active ? "About flex-row" : "About flex-row hidden"} id="about">
       <div className="container-small">
         <h2 className="About-title">About me</h2>
         <div className="About-wrapper">

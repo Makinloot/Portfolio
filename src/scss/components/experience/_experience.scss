@@ -1,5 +1,10 @@
 .Experience {
   min-height: 70vh;
+  transition: 2.5s;
+
+  &.hidden {
+    opacity: 0;
+  }
 
   &-title {
     @extend %heading-primary;

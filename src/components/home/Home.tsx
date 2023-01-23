@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { LoadContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareFacebook,
@@ -6,8 +8,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home(): JSX.Element {
+  const active = useContext(LoadContext);
+
   return (
-    <section className="Home" id="Home">
+    <section className={active ? "Home" : "Home hidden"} id="Home">
       <div className="container">
         <div className="Home-wrapper">
           <strong className="Home-intro">Hi, my name is</strong>

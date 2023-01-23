@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { LoadContext } from "../../App";
 import ExperienceText from "./ExperienceText";
 import { EXP_DATA } from "../../data";
 
@@ -7,6 +8,8 @@ export default function Experience() {
   const liRefOne = useRef(null);
   const liRefTwo = useRef(null);
 
+  const active = useContext(LoadContext);
+
   const handleExperience = (num: number, active: any, inactive: any) => {
     active.current.classList.add("active");
     inactive.current.classList.remove("active");
@@ -14,7 +17,10 @@ export default function Experience() {
   };
 
   return (
-    <section className="Experience flex-row" id="experience">
+    <section
+      className={active ? "Experience flex-row" : "Experience flex-row hidden"}
+      id="experience"
+    >
       <div className="container-small">
         <h2 className="Experience-title">experience</h2>
         <div className="Experience-wrapper">

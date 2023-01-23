@@ -31,7 +31,7 @@ export default function Burger(): JSX.Element {
         <div></div>
         <div></div>
       </div>
-      <nav className="burger-content" ref={menuRef}>
+      <nav className={open ? "burger-content" : "burger-content hidden"} ref={menuRef}>
         <ul className="flex-col">
           <li>
             <a href="#about">about me</a>

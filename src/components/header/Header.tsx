@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { LoadContext } from "../../App";
 import Burger from "./Burger";
 
 export default function Header(): JSX.Element {
+  const active = useContext(LoadContext)
+  
   return (
-    <header className="Header">
+    <header className={active ? 'Header active' : 'Header'}>
       <div className="container">
         <div className="Header-wrapper flex-row">
           <div className="Header-logo">

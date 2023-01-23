@@ -1,8 +1,12 @@
-import Card from "./Card";
+import { useContext } from "react";
+import { LoadContext } from "../../App";
 
+import Card from "./Card";
 import { projects } from "../../data";
 
 const Projects = () => {
+  const active = useContext(LoadContext);
+
   const handleProjects = () => {
     // map through projects arr and return Card
     const projectsHTML = projects.map((project) => {
@@ -23,7 +27,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="Projects flex-col" id="projects">
+    <section className={active ? "Projects flex-col" : "Projects flex-col hidden"} id="projects">
       <div className="container-small">
         <h2 className="Projects-heading">projects</h2>
         <div className="Projects-wrapper">

@@ -2,10 +2,16 @@
 
 .Header {
   position: fixed;
+  left: -100%;
   width: 100%;
   border-bottom: 2px solid $clr-lightGold;
   background-color: $clr-dark;
   z-index: 10000;
+  transition: 1s ease-in-out;
+  
+  &.active {
+    left: 0;
+  }
 
   &-wrapper {
     position: relative;

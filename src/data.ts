@@ -33,6 +33,7 @@ const colors = {
   css: "#264de4",
 };
 
+// data for projects
 export const projects: ProjectsTypes = [
   {
     id: 0,
@@ -141,6 +142,7 @@ export const projects: ProjectsTypes = [
   },
 ];
 
+// data for experience section
 export const EXP_DATA = [
   {
     position: "Frontend Dev",
@@ -174,4 +176,44 @@ export const EXP_DATA = [
       },
     ],
   },
+];
+
+// form data
+type InputDataTypes = {
+  wrapper_class: string;
+  type: string;
+  id: string;
+  placeholder: string;
+  name: string;
+}[];
+
+export const InputData: InputDataTypes = [
+  {
+    wrapper_class: "name-wrapper",
+    type: "text",
+    id: "name",
+    placeholder: "Name",
+    name: "name",
+  },
+  {
+    wrapper_class: "email-wrapper",
+    type: "email",
+    id: "email",
+    placeholder: "Email",
+    name: "email",
+  },
+  {
+    wrapper_class: "subject-wrapper",
+    type: 'text',
+    id: 'subject',
+    placeholder: 'subject',
+    name: 'subject'
+  },
+  {
+    wrapper_class: 'textarea-wrapper',
+    type: 'text',
+    id: 'textarea',
+    placeholder: 'Message',
+    name: 'text'
+  }
 ];

@@ -1,6 +1,16 @@
 .Contact {
   margin: 3rem 0 5rem;
+  padding-top: 2rem;
   min-height: 70vh;
+  transition: 2.5s;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 0;
+  }
 
   &-title {
     @extend %heading-primary;

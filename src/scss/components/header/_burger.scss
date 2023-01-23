@@ -55,6 +55,10 @@
       background-color: $clr-dark;
       transition: 0.5s ease;
 
+      &.hidden {
+        opacity: 0;
+      }
+
       ul {
         align-items: flex-start;
         gap: 0.5rem;
