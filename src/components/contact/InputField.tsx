@@ -1,4 +1,5 @@
 import React from "react";
+import { ChangeEventTypes } from "./Form";
 
 type InputFieldTypes = {
   nameClass: string;
@@ -6,6 +7,7 @@ type InputFieldTypes = {
   id: string;
   placeholder: string;
   name: string;
+  onChange: (e: ChangeEventTypes) => void;
 };
 
 const InputField: React.FC<InputFieldTypes> = ({
@@ -14,8 +16,8 @@ const InputField: React.FC<InputFieldTypes> = ({
   id,
   placeholder,
   name,
+  onChange,
 }) => {
-
   // return textarea element instead of input element
   if (nameClass === "textarea-wrapper") {
     return (
@@ -27,6 +29,7 @@ const InputField: React.FC<InputFieldTypes> = ({
           cols={30}
           rows={10}
           placeholder={placeholder}
+          onChange={onChange}
         />
         <div className="input-border"></div>
       </div>
@@ -41,6 +44,7 @@ const InputField: React.FC<InputFieldTypes> = ({
         placeholder={placeholder}
         name={name}
         required
+        onChange={onChange}
       />
       <div className="input-border"></div>
     </div>
