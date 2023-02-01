@@ -81,7 +81,7 @@ export const projects: ProjectsTypes = [
     id: 2,
     image: corpusIMG,
     name: "Language Corpus",
-    desc: "Website of Illia state university, where all kind of text data is stored which Illiauni has in its property. ( I worked as Frontend dev here, website not published yet)",
+    desc: "Website of Illia state university, where all kind of text data is stored which Illiauni has in its property. ( I worked as Frontend dev here )",
     logos: [
       {
         icon: faHtml5,
@@ -96,7 +96,7 @@ export const projects: ProjectsTypes = [
         color: colors.javascript,
       },
     ],
-    url: "https://language-corpus.onrender.com/search_words",
+    url: "http://corpora.iliauni.edu.ge/search_words",
   },
   {
     id: 3,
