@@ -30,6 +30,7 @@ const InputField: React.FC<InputFieldTypes> = ({
           rows={10}
           placeholder={placeholder}
           onChange={onChange}
+          required
         />
         <div className="input-border"></div>
       </div>

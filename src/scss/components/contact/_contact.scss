@@ -25,27 +25,25 @@
   &-form {
     max-width: 600px;
     display: grid;
-    gap: .8rem;
-    grid-template-areas: 
+    gap: 0.8rem;
+    grid-template-areas:
       "name email"
       "subject subject"
       "message message"
-      "empty btn"
-    ;
+      "empty btn";
 
     @media (max-width: 480px) {
-      grid-template-areas: 
+      grid-template-areas:
         "name"
         "email"
         "subject"
         "message"
-        "btn"
-      ;
+        "btn";
     }
 
     .input-wrapper {
       position: relative;
-      transition: .3s;
+      transition: 0.3s;
 
       input:focus ~ .input-border,
       textarea:focus ~ .input-border {
@@ -58,21 +56,27 @@
         top: 100%;
         height: 1px;
         width: 0;
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
 
     // reset input fields
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       height: 100%;
-      padding: 1rem .5rem;
+      padding: 1rem 0.5rem;
       border: none;
       outline: none;
       resize: none;
       background-color: $clr-darkGrey;
-      font-size: calc($fs-medium - .5rem);
+      font-size: calc($fs-medium - 0.5rem);
       color: $clr-lightGold;
+    }
+
+    input:focus:invalid ~ .input-border,
+    textarea:focus:invalid ~ .input-border {
+      background-color: rgb(148, 0, 0);
     }
 
     ::placeholder {
@@ -96,7 +100,7 @@
     .textarea-wrapper {
       grid-area: message;
     }
-    
+
     #submit-form {
       @extend %btn-primary;
       grid-area: btn;

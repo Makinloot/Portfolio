@@ -7,6 +7,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+import resume from './Resume.pdf';
+
 export default function Home(): JSX.Element {
   const active = useContext(LoadContext);
 
@@ -56,7 +58,7 @@ export default function Home(): JSX.Element {
               />
             </a>
           </div>
-          <button className="Home-btn">Download resume</button>
+          <a href={resume} download className="Home-btn">Download resume</a>
         </div>
       </div>
     </section>
