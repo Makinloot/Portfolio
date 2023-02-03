@@ -9,10 +9,7 @@
 @import './components/projects/projects';
 @import './components/contact/contact';
 
-body {
-  background-color: $clr-dark;
-}
-
 .App {
   min-height: 100vh;
+  background-color: $clr-dark;
 }

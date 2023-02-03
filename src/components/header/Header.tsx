@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LoadContext } from "../../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import Burger from "./Burger";
 
 export default function Header(): JSX.Element {
   const active = useContext(LoadContext)
+  const [mode, setMode] = useState<boolean>(false);
   
   return (
     <header className={active ? 'Header active' : 'Header'}>
@@ -29,8 +32,24 @@ export default function Header(): JSX.Element {
             </ul>
           </nav>
           <Burger />
+          {/* <div 
+            className="dark-mode"
+            style={styles}
+            onClick={() => setMode(!mode)}
+          >
+            {mode ? 
+              <FontAwesomeIcon icon={faMoon} /> 
+                : 
+              <FontAwesomeIcon icon={faSun} color="#000" />
+            }
+          </div> */}
         </div>
       </div>
     </header>
   );
+}
+
+const styles = {
+  cursor: 'pointer',
+  fontSize: '1.25rem'
 }

@@ -29,7 +29,7 @@ const Form = () => {
   const handleSubmitForm = (e: FormEvent | any) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_v4f5lea', 'template_wdjkhr', form.current, 'EFI6_J30jhFhLqq5K')
+    emailjs.sendForm('service_v4f5lea', 'template_hwdjkhr', form.current, 'EFI6_J30jhFhLqq5K')
       .then((result) => {
           setShowPopup(true);
       }, (error) => {

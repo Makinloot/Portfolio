@@ -81,7 +81,7 @@ export const projects: ProjectsTypes = [
     id: 2,
     image: corpusIMG,
     name: "Language Corpus",
-    desc: "Website of Illia state university, where all kind of text data is stored which Illiauni has in its property. ( I worked as Frontend dev here )",
+    desc: "Website of Illia State University, where all kind of text data is stored which Illiauni has in its property.",
     logos: [
       {
         icon: faHtml5,

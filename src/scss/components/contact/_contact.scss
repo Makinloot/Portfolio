@@ -62,7 +62,8 @@
 
     // reset input fields
     input,
-    textarea {
+    textarea,
+    #textarea {
       width: 100%;
       height: 100%;
       padding: 1rem 0.5rem;
@@ -73,6 +74,10 @@
       font-size: calc($fs-medium - 0.5rem);
       color: $clr-lightGold;
     }
+
+    // #textarea {
+    //   height: 200px;
+    // }
 
     input:focus:invalid ~ .input-border,
     textarea:focus:invalid ~ .input-border {
@@ -104,6 +109,10 @@
     #submit-form {
       @extend %btn-primary;
       grid-area: btn;
+
+      &:focus {
+        background-color: $clr-aquablueFaded;
+      }
     }
   }
 }
