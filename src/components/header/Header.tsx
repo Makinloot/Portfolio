@@ -10,7 +10,7 @@ export default function Header(): JSX.Element {
   
   return (
     <header className={active ? 'Header active' : 'Header'}>
-      <div className="container">
+      <div className="container" style={{padding: '1rem 2rem'}}>
         <div className="Header-wrapper flex-row">
           <div className="Header-logo">
             <h2>Tornike</h2>

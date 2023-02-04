@@ -9,6 +9,31 @@
 @import './components/projects/projects';
 @import './components/contact/contact';
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    background-color: $clr-dark;
+    width: 4px;
+    user-select: all;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $clr-lightGold;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (max-width: 600px) {
+    scroll-padding-top: 8rem;
+  }
+}
+
 .App {
   min-height: 100vh;
   background-color: $clr-dark;

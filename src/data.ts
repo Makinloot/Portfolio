@@ -39,7 +39,7 @@ export const projects: ProjectsTypes = [
     id: 0,
     image: gameIMG,
     name: "Karma",
-    desc: "Game website created with RAWG api, using TS and React, where user can search 300 000+ games.",
+    desc: "Game website created with RAWG api, where user can search 300 000+ games, DLC, genres, similar games trailers & more.",
     logos: [
       {
         icon: faReact,
@@ -60,7 +60,7 @@ export const projects: ProjectsTypes = [
     id: 1,
     image: weatherIMG,
     name: "Weather",
-    desc: "Weather website where user can see weather of current location and search any city weather",
+    desc: "Weather website where user can check out it's current location weather or search forecast data of any city/country.",
     logos: [
       {
         icon: faReact,
@@ -81,7 +81,7 @@ export const projects: ProjectsTypes = [
     id: 2,
     image: corpusIMG,
     name: "Language Corpus",
-    desc: "Website of Illia State University, where all kind of text data is stored which Illiauni has in its property.",
+    desc: "Website of Illia State University, where all kind of text data is stored which Illiauni has in its database.",
     logos: [
       {
         icon: faHtml5,

@@ -36,10 +36,10 @@
 
   &-secondary {
     position: relative;
-    background-color: $clr-aquablueFaded;
     transition: all .3s;
     margin-right: 2rem;
     max-height: 300px;
+    z-index: 100;
 
     &:hover {
       background-color: transparent;

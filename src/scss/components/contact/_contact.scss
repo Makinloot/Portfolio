@@ -75,10 +75,6 @@
       color: $clr-lightGold;
     }
 
-    // #textarea {
-    //   height: 200px;
-    // }
-
     input:focus:invalid ~ .input-border,
     textarea:focus:invalid ~ .input-border {
       background-color: rgb(148, 0, 0);

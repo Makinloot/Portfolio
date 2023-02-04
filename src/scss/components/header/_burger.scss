@@ -5,7 +5,7 @@
 
     // open burger menu
     .burger-wrapper.active ~ .burger-content {
-      right: 0;
+      right: -2rem;
     }
 
     .burger-wrapper {
@@ -50,6 +50,7 @@
       right: -140%;
       z-index: 10000;
       width: 200px;
+      height: calc(100vh - 124px);
       padding: 1rem;
       border: 2px solid $clr-lightGold;
       background-color: $clr-dark;
@@ -61,7 +62,8 @@
 
       ul {
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 2rem;
+        padding: 2rem 1rem;
       }
 
       a {
