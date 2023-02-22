@@ -15,7 +15,6 @@ const Contact = () => {
             I'm interested in freelance & fulltime job opportunities. However,
             if you have other request or question, don't hesitate to use the
             form.
-            E-Mail: Itorn9777@gmail.com
           </p>
           <Form />
         </div>

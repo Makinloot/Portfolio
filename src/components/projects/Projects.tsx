@@ -22,19 +22,19 @@ const Projects = () => {
         />
       );
     });
-    // return mapped card
     return projectsHTML;
   };
 
   return (
-    <section className={active ? "Projects flex-col" : "Projects flex-col hidden"} id="projects">
+    <section
+      className={active ? "Projects flex-col" : "Projects flex-col hidden"}
+      id="projects"
+    >
       <div className="container-small">
         <h2 className="Projects-heading">projects</h2>
         <div className="Projects-wrapper">
           {handleProjects()}
-          <div className="Projects-card flex-col">
-            <a href="https://github.com/Makinloot?tab=repositories" target="_blank" className="flex-col">See more</a>
-          </div>
+          <a href="https://github.com/Makinloot?tab=repositories" target="_blank" className="flex-col more">See more</a>
         </div>
       </div>
     </section>

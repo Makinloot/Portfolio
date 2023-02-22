@@ -11,6 +11,8 @@ import weatherIMG from "./assets/weather-bg.png";
 import corpusIMG from "./assets/corpus-bg.png";
 import dictionaryIMG from "./assets/dictionary-bg.png";
 import startupIMG from "./assets/startup-bg.png";
+import planetsIMG from "./assets/planets-bg.png";
+import resumeIMG from "./assets/resume-bg.png";
 
 export type ProjectsTypes = {
   id: number;
@@ -100,6 +102,44 @@ export const projects: ProjectsTypes = [
   },
   {
     id: 3,
+    image: planetsIMG,
+    name: "Planets",
+    desc: "Planets website, which displays planets from our solar system in 3D model objects. This website was made using React + Three.js/fiber",
+    logos: [
+      {
+        icon: faReact,
+        color: colors.react,
+      },
+      {
+        icon: faSass,
+        color: colors.sass,
+      },
+    ],
+    url: "https://voluble-basbousa-0f61b9.netlify.app/mercury",
+  },
+  {
+    id: 4,
+    image: resumeIMG,
+    name: "Redberry",
+    desc: "This project was created according to Redberry's given challenge. User can create resume and save it to Redberry's API.",
+    logos: [
+      {
+        icon: faReact,
+        color: colors.react
+      },
+      {
+        icon: faSquareJs,
+        color: colors.typescript
+      },
+      {
+        icon: faSass,
+        color: colors.sass,
+      }
+    ],
+    url: "https://verdant-cascaron-b7acd2.netlify.app"
+  },
+  {
+    id: 5,
     image: dictionaryIMG,
     name: "Unilab Dictionary",
     desc: "Dictionary website where i worked as frontend developer for Unilab project, backened side is not yet written",
@@ -120,7 +160,7 @@ export const projects: ProjectsTypes = [
     url: "https://gkhundadze.github.io/unilab-dictionary/index.html",
   },
   {
-    id: 4,
+    id: 6,
     image: startupIMG,
     name: "Landing Page",
     desc: "Just a simple landing page, fully responsive, I built for fun",
@@ -204,16 +244,16 @@ export const InputData: InputDataTypes = [
   },
   {
     wrapper_class: "subject-wrapper",
-    type: 'text',
-    id: 'subject',
-    placeholder: 'subject',
-    name: 'subject'
+    type: "text",
+    id: "subject",
+    placeholder: "subject",
+    name: "subject",
   },
   {
-    wrapper_class: 'textarea-wrapper',
-    type: 'text',
-    id: 'textarea',
-    placeholder: 'Message',
-    name: 'text'
-  }
+    wrapper_class: "textarea-wrapper",
+    type: "text",
+    id: "textarea",
+    placeholder: "Message",
+    name: "text",
+  },
 ];
