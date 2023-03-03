@@ -1,4 +1,4 @@
-@import './burger';
+@import "./burger";
 
 .Header {
   position: fixed;
@@ -7,10 +7,21 @@
   border-bottom: 2px solid $clr-lightGold;
   background-color: $clr-dark;
   z-index: 10000;
-  transition: 1s ease-in-out;
-  
+  transition: 1s;
+
   &.active {
     left: 0;
+  }
+
+  // make header opacity 0 if browser supports has selector
+  @supports selector(:has(.Header-wrapper.active)) {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:has(.Header-wrapper.active) {
+    opacity: 1;
+    pointer-events: all;
   }
 
   &-wrapper {
@@ -58,9 +69,8 @@
 
 @media (max-width: 480px) {
   .Header {
-
     &-logo {
-      font-size: calc($fs-medium + .5rem);
+      font-size: calc($fs-medium + 0.5rem);
     }
   }
 }

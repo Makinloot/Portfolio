@@ -1,17 +1,32 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LoadContext } from "../../App";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import Burger from "./Burger";
 
 export default function Header(): JSX.Element {
-  const active = useContext(LoadContext)
-  const [mode, setMode] = useState<boolean>(false);
-  
+  const active = useContext(LoadContext);
+  const [headerBg, setHeaderBg] = useState<boolean>(true);
+
+  const handleHeaderBg = (e: any) => {
+    if (e.wheelDelta >= 0) setHeaderBg(true);
+    else setHeaderBg(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousewheel", handleHeaderBg);
+
+    return () => window.removeEventListener('mousewheel', handleHeaderBg)
+  }, []);
+
   return (
-    <header className={active ? 'Header active' : 'Header'}>
-      <div className="container" style={{padding: '1rem 2rem'}}>
-        <div className="Header-wrapper flex-row">
+    <header className={active ? "Header active" : "Header"}>
+      <div className="container" style={{ padding: "1rem 2rem" }}>
+        <div
+          className={
+            headerBg
+              ? "Header-wrapper active flex-row"
+              : "Header-wrapper flex-row"
+          }
+        >
           <div className="Header-logo">
             <h2>Tornike</h2>
           </div>
@@ -32,17 +47,6 @@ export default function Header(): JSX.Element {
             </ul>
           </nav>
           <Burger />
-          {/* <div 
-            className="dark-mode"
-            style={styles}
-            onClick={() => setMode(!mode)}
-          >
-            {mode ? 
-              <FontAwesomeIcon icon={faMoon} /> 
-                : 
-              <FontAwesomeIcon icon={faSun} color="#000" />
-            }
-          </div> */}
         </div>
       </div>
     </header>
@@ -50,6 +54,6 @@ export default function Header(): JSX.Element {
 }
 
 const styles = {
-  cursor: 'pointer',
-  fontSize: '1.25rem'
-}
+  cursor: "pointer",
+  fontSize: "1.25rem",
+};
