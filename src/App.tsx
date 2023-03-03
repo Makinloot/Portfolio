@@ -7,6 +7,9 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei/core";
+
 export const LoadContext = React.createContext(false);
 
 function App(): JSX.Element {
@@ -18,6 +21,18 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
+      <div className="stars">
+        <Canvas>
+          <Stars
+            radius={300}
+            depth={60}
+            count={10000}
+            factor={7}
+            saturation={0}
+            fade={true}
+          />
+        </Canvas>
+      </div>
       <LoadContext.Provider value={active}>
         <Header />
         <Home />
