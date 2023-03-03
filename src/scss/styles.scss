@@ -35,8 +35,9 @@ html {
 }
 
 .App {
+  position: relative;
   min-height: 100vh;
-  background-color: $clr-dark;
+
 
   .stars {
     position: fixed;
@@ -44,5 +45,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
+    background-color: $clr-dark;
   }
 }

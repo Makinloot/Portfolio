@@ -43,13 +43,13 @@ export default function About() {
               <li>Node js</li>
             </ul>
           </div>
-          <div className="About-secondary flex-row">
+          <div className="About-secondary flex-row" title="Try to rotate">
             <Canvas>
               <OrbitControls
                 enablePan={false}
                 enableZoom={false}
               />
-              <mesh scale={3.6} position={[.3, -.3, 0]}>
+              <mesh scale={4} position={[.3, -.3, 0]}>
                 <boxGeometry />
                 <meshBasicMaterial map={boxTexture} />
               </mesh>

@@ -34,7 +34,6 @@ const Projects = () => {
         <h2 className="Projects-heading">projects</h2>
         <div className="Projects-wrapper">
           {handleProjects()}
-          <a href="https://github.com/Makinloot?tab=repositories" target="_blank" className="flex-col more">See more</a>
         </div>
       </div>
     </section>
