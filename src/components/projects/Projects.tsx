@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { LoadContext } from "../../App";
 
 import Card from "./Card";
+
 import { projects } from "../../data";
 
 const Projects = () => {

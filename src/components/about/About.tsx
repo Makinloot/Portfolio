@@ -1,14 +1,12 @@
 import { useContext} from "react";
 import { LoadContext } from "../../App";
-import myImg from "../../assets/me.jpg";
 
-import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { TextureLoader } from "three";
+import { Canvas } from "@react-three/fiber";
+
+import ImgBox from "../about/ImgBox";
 
 export default function About() {
   const active = useContext(LoadContext);
-  const [boxTexture] = useLoader(TextureLoader, [myImg])
 
   return (
     <section className={active ? "About flex-row" : "About flex-row hidden"} id="about">
@@ -43,16 +41,9 @@ export default function About() {
               <li>Node js</li>
             </ul>
           </div>
-          <div className="About-secondary flex-row" title="Try to rotate">
+          <div className="About-secondary flex-row">
             <Canvas>
-              <OrbitControls
-                enablePan={false}
-                enableZoom={false}
-              />
-              <mesh scale={4} position={[.3, -.3, 0]}>
-                <boxGeometry />
-                <meshBasicMaterial map={boxTexture} />
-              </mesh>
+              <ImgBox />
             </Canvas>
           </div>
         </div>

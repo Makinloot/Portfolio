@@ -1,25 +1,25 @@
-@import './assets/vars';
-@import './assets/reset';
-@import './assets/utils';
+@import "./assets/vars";
+@import "./assets/reset";
+@import "./assets/utils";
 
-@import './components/header/header';
-@import './components/home/home';
-@import './components/about/about';
-@import './components/experience/experience';
-@import './components/projects/projects';
-@import './components/contact/contact';
+@import "./components/header/header";
+@import "./components/home/home";
+@import "./components/about/about";
+@import "./components/experience/experience";
+@import "./components/projects/projects";
+@import "./components/contact/contact";
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
-  
+
   &::-webkit-scrollbar {
     background-color: transparent;
     background-color: $clr-dark;
     width: 4px;
     user-select: all;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background-color: $clr-lightGold;
     border-radius: 0.5rem;
@@ -37,7 +37,6 @@ html {
 .App {
   position: relative;
   min-height: 100vh;
-
 
   .stars {
     position: fixed;
