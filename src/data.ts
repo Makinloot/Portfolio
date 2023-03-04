@@ -1,3 +1,4 @@
+import { Vector3 } from "three";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faReact,
@@ -13,6 +14,12 @@ import dictionaryIMG from "./assets/dictionary-bg.png";
 import startupIMG from "./assets/startup-bg.png";
 import planetsIMG from "./assets/planets-bg.png";
 import resumeIMG from "./assets/resume-bg.png";
+
+import mercury from './assets/textures/mercury.jpg'
+import venus from './assets/textures/venus.jpg'
+import earth from './assets/textures/earth.jpg'
+import earthClouds from './assets/textures/earth-clouds.jpg'
+import mars from './assets/textures/mars.jpg'
 
 export type ProjectsTypes = {
   id: number;
@@ -257,3 +264,50 @@ export const InputData: InputDataTypes = [
     name: "text",
   },
 ];
+
+// planets data
+export type PlanetTypes = {
+  orbit: number;
+  center: Vector3;
+  radius: number;
+  speed: number;
+  size: number;
+  texture: string;
+  cloudsTexture?: string;
+}
+
+export const planets: PlanetTypes[] = [
+  {
+    orbit: 60,
+    center: new Vector3(10, 10, -30),
+    radius: 8,
+    speed: 100,
+    size: .5,
+    texture: mercury
+  },
+  {
+    orbit: 30,
+    center: new Vector3(10, 10, -30),
+    radius: 13,
+    speed: 200,
+    size: .8,
+    texture: venus
+  },
+  {
+    orbit: -60,
+    center: new Vector3(10, 10, -30),
+    radius: 20,
+    speed: 350,
+    size: 1.5,
+    texture: earth,
+    cloudsTexture: earthClouds
+  },
+  {
+    orbit: -30,
+    center: new Vector3(10, 10, -30),
+    radius: 30,
+    speed: 400,
+    size: 1.2,
+    texture: mars
+  },
+]

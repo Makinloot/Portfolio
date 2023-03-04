@@ -1,15 +1,16 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { LoadContext } from "../../App";
 
-import { Canvas } from "@react-three/fiber";
-
-import ImgBox from "../about/ImgBox";
+import myImg from "../../assets/me.jpg";
 
 export default function About() {
   const active = useContext(LoadContext);
 
   return (
-    <section className={active ? "About flex-row" : "About flex-row hidden"} id="about">
+    <section
+      className={active ? "About flex-row" : "About flex-row hidden"}
+      id="about"
+    >
       <div className="container-small">
         <h2 className="About-title">About me</h2>
         <div className="About-wrapper">
@@ -41,10 +42,8 @@ export default function About() {
               <li>Node js</li>
             </ul>
           </div>
-          <div className="About-secondary flex-row">
-            <Canvas>
-              <ImgBox />
-            </Canvas>
+          <div className="About-secondary">
+            <img src={myImg} alt="Tornike Epitashvili" />
           </div>
         </div>
       </div>
