@@ -14,6 +14,7 @@ import dictionaryIMG from "./assets/dictionary-bg.png";
 import startupIMG from "./assets/startup-bg.png";
 import planetsIMG from "./assets/planets-bg.png";
 import resumeIMG from "./assets/resume-bg.png";
+import netflixIMG from './assets/netflix.png';
 
 import mercury from './assets/textures/mercury.jpg'
 import venus from './assets/textures/venus.jpg'
@@ -42,10 +43,35 @@ const colors = {
   css: "#264de4",
 };
 
+const randomId = () => (
+  Math.random() * Math.random() * Math.random()
+)
+
 // data for projects
 export const projects: ProjectsTypes = [
   {
-    id: 0,
+    id: randomId(),
+    image: netflixIMG,
+    name: 'Netflix Clone',
+    desc: 'Netflix clone where user can sign in to see various movie trailers. This website was made using Firebase/TMDB Api.',
+    logos: [
+      {
+        icon: faReact,
+        color: colors.react
+      },
+      {
+        icon: faSquareJs,
+        color: colors.typescript
+      },
+      {
+        icon: faSass,
+        color: colors.sass
+      }
+    ],
+    url: 'https://dynamic-paprenjak-586a86.netlify.app'
+  },
+  {
+    id: randomId(),
     image: gameIMG,
     name: "Karma",
     desc: "Game website created with RAWG api, where user can search 300 000+ games, DLC, genres, similar games trailers & more.",
@@ -66,7 +92,7 @@ export const projects: ProjectsTypes = [
     url: "https://beautiful-salamander-e8d545.netlify.app",
   },
   {
-    id: 1,
+    id: randomId(),
     image: weatherIMG,
     name: "Weather",
     desc: "Weather website where user can check out it's current location weather or search forecast data of any city/country.",
@@ -87,7 +113,7 @@ export const projects: ProjectsTypes = [
     url: "https://ornate-marshmallow-18e926.netlify.app",
   },
   {
-    id: 2,
+    id: randomId(),
     image: corpusIMG,
     name: "Language Corpus",
     desc: "Website of Illia State University, where all kind of text data is stored which Illiauni has in its database.",
@@ -108,7 +134,7 @@ export const projects: ProjectsTypes = [
     url: "http://corpora.iliauni.edu.ge/search_words",
   },
   {
-    id: 3,
+    id: randomId(),
     image: planetsIMG,
     name: "Planets",
     desc: "Planets website, which displays planets from our solar system in 3D model objects. This website was made using React + Three.js/fiber",
@@ -125,7 +151,7 @@ export const projects: ProjectsTypes = [
     url: "https://voluble-basbousa-0f61b9.netlify.app/mercury",
   },
   {
-    id: 4,
+    id: randomId(),
     image: resumeIMG,
     name: "Redberry",
     desc: "This project was created according to Redberry's given challenge. User can create resume and save it to Redberry's API.",
@@ -146,7 +172,7 @@ export const projects: ProjectsTypes = [
     url: "https://verdant-cascaron-b7acd2.netlify.app"
   },
   {
-    id: 5,
+    id: randomId(),
     image: dictionaryIMG,
     name: "Unilab Dictionary",
     desc: "Dictionary website where i worked as frontend developer for Unilab project, backened side is not yet written",
@@ -166,27 +192,27 @@ export const projects: ProjectsTypes = [
     ],
     url: "https://gkhundadze.github.io/unilab-dictionary/index.html",
   },
-  {
-    id: 6,
-    image: startupIMG,
-    name: "Landing Page",
-    desc: "Just a simple landing page, fully responsive, I built for fun",
-    logos: [
-      {
-        icon: faHtml5,
-        color: colors.html,
-      },
-      {
-        icon: faSass,
-        color: colors.sass,
-      },
-      {
-        icon: faSquareJs,
-        color: colors.javascript,
-      },
-    ],
-    url: "https://makinloot.github.io/startup-landing/",
-  },
+  // {
+  //   id: 6,
+  //   image: startupIMG,
+  //   name: "Landing Page",
+  //   desc: "Just a simple landing page, fully responsive, I built for fun",
+  //   logos: [
+  //     {
+  //       icon: faHtml5,
+  //       color: colors.html,
+  //     },
+  //     {
+  //       icon: faSass,
+  //       color: colors.sass,
+  //     },
+  //     {
+  //       icon: faSquareJs,
+  //       color: colors.javascript,
+  //     },
+  //   ],
+  //   url: "https://makinloot.github.io/startup-landing/",
+  // },
 ];
 
 // data for experience section
