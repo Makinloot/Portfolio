@@ -38,7 +38,7 @@ export default function About() {
               <li>CSS</li>
               <li>Javascript</li>
               <li>Typescript</li>
-              <li>React</li>
+              <li>React / React Native</li>
               <li>Node js</li>
             </ul>
           </div>
